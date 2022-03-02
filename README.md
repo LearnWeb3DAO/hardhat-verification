@@ -6,7 +6,7 @@ If you open [this](https://etherscan.io/address/0x7be8076f4ea4a4ad08075c2508e481
 
 Are you wondering why that doesnt happen for your contract?
 
-- The reason is that the contract mentioned above is verified on etherscan while your's is not
+- The reason is that the contract mentioned above is verified on etherscan while your's is not.
 
 So lets learn why and how to verify contracts on etherscan 🚀
 
@@ -20,7 +20,7 @@ So lets learn why and how to verify contracts on etherscan 🚀
 ## Why hardhat etherscan verification?
 
 - Verifying the code manually on etherscan is very hard because you need to make sure that you not only verify your main contract but also the contracts that you are inheriting or using along with your main contract.
-- If you deployed your contract for testing and verified it already with the slightest of changes to your contract you would have to again go through the manual process which gets tedious over time.
+- If you deployed your contract for testing and verified it already with the slightest of changes to your contract you will have to again go through the manual process which gets tedious over time.
 
 ## Build
 
@@ -29,21 +29,19 @@ Lets now learn how we can leverage hardhat for verifying smart contracts with on
 Lets goo 🚀🚀🚀
 
 #### Write some code to verify
-
-- First, you need to create a Whitelist-Daap folder where the Hardhat project and your Next.js app will later go
 - Open up a terminal and execute these commands
 
-```bash
+    ```bash
     mkdir hardhat-verification
     cd hardhat-verification
-```
+    ```
 
-- Then, in hardhat-verification folder, you will set up Hardhat project
+- You will noe need to set up your Hardhat project
 
-```bash
+    ```bash
     npm init --yes
     npm install --save-dev hardhat
-```
+    ```
 
 - In the same directory where you installed Hardhat run:
 
@@ -69,6 +67,7 @@ npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs
   ```bash
   npm install --save-dev @nomiclabs/hardhat-etherscan
   ```
+- `hardhat-etherscan` npm package is the package from hardhat which will help us with etherscan verification.
 
 - Now create a new file inside the `contracts` directory called `Verify.sol`.
 
@@ -91,12 +90,13 @@ npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs
   }
   ```
 
-- Now we would install `dotenv` package to be able to import the env file and use it in our config. Open up a terminal pointing at`hardhat-tutorial` directory and execute this command
+- We will install `dotenv` package to be able to import the env file and use it in our config. Open up a terminal pointing at`hardhat-tutorial` directory and execute this command
 
   ```bash
   npm install dotenv
   ```
 
+- Mumbai network is one of the testnet's on Polygon. We will learn today how to verify our contracts on mumbai.
 - Now create a `.env` file in the `hardhat-tutorial` folder and add the following lines, use the instructions in the comments to get your `ALCHEMY_API_KEY_URL`, `MUMBAI_PRIVATE_KEY` and `POLYGONSCAN_KEY`.If you dont have Mumbai on MetaMask, you can follow [this](https://portal.thirdweb.com/guides/get-matic-on-polygon-mumbai-testnet-faucet) to add it to your MetaMask, make sure that the account from which you get your mumbai private key is funded with mumbai matic, you can get some from [here](https://faucet.polygon.technology/).
 
   ```bash
@@ -162,7 +162,7 @@ npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs
     });
   ```
 
-- Now open the hardhat.config.js file, we will add the `mumbai` network here so that we can deploy our contract to mumbai and an `etherscan` object so that we can verify our contract on `polygonscan`. Replace all the lines in the `hardhart.config.js` file with the given below lines.
+- Now open the `hardhat.config.js` file, we will add the `mumbai` network here so that we can deploy our contract to mumbai and an `etherscan` object so that we can verify our contract on `polygonscan`. Replace all the lines in the `hardhart.config.js` file with the given below lines.
 
   ```javascript
   require("@nomiclabs/hardhat-waffle");
