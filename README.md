@@ -204,3 +204,9 @@ npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs
   ```
 
 - It should have printed a link to mumbai polygonscan, your contract is now verified. Click on polygonscan link and interact with your contract there 🚀🚀🚀
+
+---
+
+To pass the skill test for this level, select the `Mumbai` test network below and input the contract address you have verified on the Polygon Mumbai Testnet. 
+
+Share the link in Discord, and as always, feel free to ask any questions!
