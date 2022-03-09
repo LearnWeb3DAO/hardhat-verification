@@ -90,14 +90,14 @@ npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs
   }
   ```
 
-- We will install `dotenv` package to be able to import the env file and use it in our config. Open up a terminal pointing at`hardhat-tutorial` directory and execute this command
+- We will install `dotenv` package to be able to import the env file and use it in our config. Open up a terminal pointing at`hardhat-verification` directory and execute this command
 
   ```bash
   npm install dotenv
   ```
 
 - Mumbai network is one of the testnet's on Polygon. We will learn today how to verify our contracts on mumbai.
-- Now create a `.env` file in the `hardhat-tutorial` folder and add the following lines, use the instructions in the comments to get your `ALCHEMY_API_KEY_URL`, `MUMBAI_PRIVATE_KEY` and `POLYGONSCAN_KEY`.If you dont have Mumbai on MetaMask, you can follow [this](https://portal.thirdweb.com/guides/get-matic-on-polygon-mumbai-testnet-faucet) to add it to your MetaMask, make sure that the account from which you get your mumbai private key is funded with mumbai matic, you can get some from [here](https://faucet.polygon.technology/).
+- Now create a `.env` file in the `hardhat-verification` folder and add the following lines, use the instructions in the comments to get your `ALCHEMY_API_KEY_URL`, `MUMBAI_PRIVATE_KEY` and `POLYGONSCAN_KEY`.If you dont have Mumbai on MetaMask, you can follow [this](https://portal.thirdweb.com/guides/get-matic-on-polygon-mumbai-testnet-faucet) to add it to your MetaMask, make sure that the account from which you get your mumbai private key is funded with mumbai matic, you can get some from [here](https://faucet.polygon.technology/).
 
   ```bash
     // Go to https://www.alchemyapi.io, sign up, create
@@ -191,7 +191,7 @@ npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs
   };
   ```
 
-- Compile the contract, open up a terminal pointing at`hardhat-tutorial` directory and execute this command
+- Compile the contract, open up a terminal pointing at`hardhat-verification` directory and execute this command
 
   ```bash
     npx hardhat compile
