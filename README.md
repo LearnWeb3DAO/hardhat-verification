@@ -36,7 +36,7 @@ Lets goo 🚀🚀🚀
     cd hardhat-verification
     ```
 
-- You will noe need to set up your Hardhat project
+- You will now need to set up your Hardhat project
 
     ```bash
     npm init --yes
@@ -62,7 +62,7 @@ If you are not on mac, please do this extra step and install these libraries as 
 npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
 ```
 
-- We also need to install `hardhat-etherscan` npm package, in your terminal pointing to `hardhar-verification` folder execute this:
+- We also need to install `hardhat-etherscan` npm package, in your terminal pointing to `hardhat-verification` folder execute this:
 
   ```bash
   npm install --save-dev @nomiclabs/hardhat-etherscan
@@ -162,7 +162,7 @@ npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs
     });
   ```
 
-- Now open the `hardhat.config.js` file, we will add the `mumbai` network here so that we can deploy our contract to mumbai and an `etherscan` object so that we can verify our contract on `polygonscan`. Replace all the lines in the `hardhart.config.js` file with the given below lines.
+- Now open the `hardhat.config.js` file, we will add the `mumbai` network here so that we can deploy our contract to mumbai and an `etherscan` object so that we can verify our contract on `polygonscan`. Replace all the lines in the `hardhat.config.js` file with the given below lines.
 
   ```javascript
   require("@nomiclabs/hardhat-waffle");
