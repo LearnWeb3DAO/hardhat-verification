@@ -36,7 +36,7 @@ Lets goo 🚀🚀🚀
     cd hardhat-verification
     ```
 
-- You will noe need to set up your Hardhat project
+- You will now need to set up your Hardhat project
 
     ```bash
     npm init --yes
