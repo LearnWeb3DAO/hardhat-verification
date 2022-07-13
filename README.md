@@ -1,12 +1,12 @@
-# Hardhat Etherscan Verification
+# Verify your Smart Contracts on Etherscan
 
 If you open [this](https://etherscan.io/address/0x7be8076f4ea4a4ad08075c2508e481d6c946d12b#writeContract) etherscan link, you can see that you can interact with this smart contract's functions directly through etherscan, similar to how you used to do it on Remix.
 
 ![](https://i.imgur.com/IiqNVYe.png)
 
-Are you wondering why that doesnt happen for your contract?
+Are you wondering why that doesn't happen for your contract?
 
-- The reason is that the contract mentioned above is verified on etherscan while your's is not.
+- The reason is that the contract mentioned above is verified on etherscan while yours is not.
 
 So lets learn why and how to verify contracts on etherscan 🚀
 
@@ -49,25 +49,18 @@ Lets goo 🚀🚀🚀
   npx hardhat
   ```
 
-  - Select `Create a basic sample project`
+  - Select `Create a Javascript project`
   - Press enter for the already specified `Hardhat Project root`
   - Press enter for the question on if you want to add a `.gitignore`
-  - Press enter for `Do you want to install this sample project's dependencies with npm (@nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers)?`
+  - Press enter for `Do you want to install this sample project's dependencies with npm (@nomicfoundation/hardhat-toolbox)?`
 
 Now you have a hardhat project ready to go!
 
-If you are not on mac, please do this extra step and install these libraries as well :)
+If you are on Windows, please do this extra step and install these libraries as well :)
 
 ```bash
-npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs/hardhat-ethers ethers
+npm install --save-dev @nomicfoundation/hardhat-toolbox
 ```
-
-- We also need to install `hardhat-etherscan` npm package, in your terminal pointing to `hardhat-verification` folder execute this:
-
-  ```bash
-  npm install --save-dev @nomiclabs/hardhat-etherscan
-  ```
-- `hardhat-etherscan` npm package is the package from hardhat which will help us with etherscan verification.
 
 - Now create a new file inside the `contracts` directory called `Verify.sol`.
 
@@ -90,7 +83,7 @@ npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs
   }
   ```
 
-- We will install `dotenv` package to be able to import the env file and use it in our config. Open up a terminal pointing at`hardhat-verification` directory and execute this command
+- We will install `dotenv` package to be able to import the env file and use it in our config. Open up a terminal pointing at `hardhat-verification` directory and execute this command
 
   ```bash
   npm install dotenv
@@ -116,12 +109,11 @@ npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs
     POLYGONSCAN_KEY="add-the-polygonscan-api-token-here"
   ```
 
-- Lets deploy the contract to `mumbai` network. Create a new file named `deploy.js` under the `scripts` folder. Notice how we are using code to verify the contract.
+- Lets deploy the contract to `mumbai` network. Create a new file, or replace the existing default one, named `deploy.js` under the `scripts` folder. Notice how we are using code to verify the contract.
 
   ```javascript
   const { ethers } = require("hardhat");
   require("dotenv").config({ path: ".env" });
-  require("@nomiclabs/hardhat-etherscan");
 
   async function main() {
     /*
@@ -165,9 +157,8 @@ npm install --save-dev @nomiclabs/hardhat-waffle ethereum-waffle chai @nomiclabs
 - Now open the `hardhat.config.js` file, we will add the `mumbai` network here so that we can deploy our contract to mumbai and an `etherscan` object so that we can verify our contract on `polygonscan`. Replace all the lines in the `hardhat.config.js` file with the given below lines.
 
   ```javascript
-  require("@nomiclabs/hardhat-waffle");
+  require("@nomicfoundation/hardhat-toolbox");
   require("dotenv").config({ path: ".env" });
-  require("@nomiclabs/hardhat-etherscan");
 
   const ALCHEMY_API_KEY_URL = process.env.ALCHEMY_API_KEY_URL;
 
